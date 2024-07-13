@@ -16,10 +16,15 @@ const cosas = {
 };
 
 function getAll() {
-
+  return cosas.collection
 }
 
 function getById(id: number) {
+  for (let i = 0; i < cosas.collection.length; i++) {
+    if (cosas.collection[i].id == id) {
+      return cosas.collection[i];
+    }
+  }
 }
 
 export {
